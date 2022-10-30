@@ -1,0 +1,24 @@
+body{
+    background-color: pink;
+    color: black;
+    text-align: center;
+}
+img {
+    text-align: center;
+    border-radius: 10px;
+    width: 375px;
+    height: 440px;
+}
+p {
+    text-align: center;
+    font-family:"Agency FB";
+    font-size: 50px;
+}
+a {
+    border-radius: 50%;
+}
+table{
+    text-align: center;
+    font-family:"Agency FB";
+    font-size: 40px;
+}
