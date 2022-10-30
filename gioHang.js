@@ -39,7 +39,7 @@ function display() {
         }
     }
     document.getElementById('hienGioHang').innerHTML = gioHang;
-    document.getElementById('hienGia').innerHTML= tongGia + 'tr';
+    document.getElementById('hienGia').innerHTML= 'Tổng thiệt hại: '+ tongGia + 'tr';
 }
 function add() {
     let namePet = document.getElementById('name').value;
