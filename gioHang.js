@@ -13,6 +13,28 @@ function display() {
                             <td id=" ${i}"> ${listGioHang[i]} </td><br>
                             <td> <button onclick="deletePet(` + i + `)">Delete</button> </td>
                    </tr>`
+
+    }
+    document.getElementById('hienGioHang').innerHTML = gioHang;
+
+}
+function add() {
+    let namePet = document.getElementById('name').value;
+    listGioHang.push(namePet);
+
+    document.getElementById('hienGia').innerHTML= 'Tổng thiệt hại: '+ tongGia + 'tr';
+    tongGia=0;
+    tinhGia()
+    display()
+}
+function deletePet(index){
+    listGioHang.splice(index,1);
+    tongGia=0;
+    tinhGia()
+    display()
+}
+function tinhGia() {
+    for (let i = 0; i < listGioHang.length; i++) {
         if (listGioHang[i] === 'Golden') {
             tongGia += 20;
         }
@@ -38,15 +60,5 @@ function display() {
             tongGia += 40;
         }
     }
-    document.getElementById('hienGioHang').innerHTML = gioHang;
-    document.getElementById('hienGia').innerHTML= 'Tổng thiệt hại: '+ tongGia + 'tr';
-}
-function add() {
-    let namePet = document.getElementById('name').value;
-    listGioHang.push(namePet);
-    display()
-}
-function deletePet(index){
-    listGioHang.splice(index,1);
-    display()
+    document.getElementById('hienGia').innerHTML = 'Tổng thiệt hại: ' + tongGia + 'tr';
 }
